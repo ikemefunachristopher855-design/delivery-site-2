@@ -28,8 +28,7 @@ body {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(230,57,70,0.85), rgba(230,57,70,0.85)), url('images/delivery-banner.jpg') no-repeat center/cover;
-  color: #fff;
+  background: #f1faee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,19 +37,27 @@ body {
   padding: 2rem;
 }
 
+.hero img {
+  max-width: 400px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 .btn, .order-btn {
-  background: #f1faee;
-  color: #e63946;
+  background: #e63946;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn:hover, .order-btn:hover {
   background: #a8dadc;
+  transform: scale(1.05);
 }
 
 section {
@@ -74,8 +81,40 @@ section {
   text-align: center;
 }
 
+.menu-item img {
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
 .about {
   background: #f9f9f9;
+  text-align: center;
+}
+
+.about img {
+  max-width: 400px;
+  margin-top: 2rem;
+  border-radius: 10px;
 }
 
 .contact {
